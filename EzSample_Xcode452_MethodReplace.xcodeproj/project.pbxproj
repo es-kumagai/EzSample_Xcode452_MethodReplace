@@ -18,6 +18,7 @@
 		B1A335D01665BF970010C571 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B1A335CF1665BF970010C571 /* Default-568h@2x.png */; };
 		B1A335D31665BF970010C571 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1A335D11665BF970010C571 /* MainStoryboard.storyboard */; };
 		B1A335D61665BF970010C571 /* EzSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A335D51665BF970010C571 /* EzSampleViewController.m */; };
+		B1A335E11665D1F80010C571 /* EzSample2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A335E01665D1F80010C571 /* EzSample2ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		B1A335D21665BF970010C571 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		B1A335D41665BF970010C571 /* EzSampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EzSampleViewController.h; sourceTree = "<group>"; };
 		B1A335D51665BF970010C571 /* EzSampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EzSampleViewController.m; sourceTree = "<group>"; };
+		B1A335DF1665D1F80010C571 /* EzSample2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzSample2ViewController.h; sourceTree = "<group>"; };
+		B1A335E01665D1F80010C571 /* EzSample2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EzSample2ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				B1A335D11665BF970010C571 /* MainStoryboard.storyboard */,
 				B1A335D41665BF970010C571 /* EzSampleViewController.h */,
 				B1A335D51665BF970010C571 /* EzSampleViewController.m */,
+				B1A335DF1665D1F80010C571 /* EzSample2ViewController.h */,
+				B1A335E01665D1F80010C571 /* EzSample2ViewController.m */,
 				B1A335C01665BF970010C571 /* Supporting Files */,
 			);
 			path = EzSample_Xcode452_MethodReplace;
@@ -177,6 +182,7 @@
 				B1A335C61665BF970010C571 /* main.m in Sources */,
 				B1A335CA1665BF970010C571 /* EzSampleAppDelegate.m in Sources */,
 				B1A335D61665BF970010C571 /* EzSampleViewController.m in Sources */,
+				B1A335E11665D1F80010C571 /* EzSample2ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

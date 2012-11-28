@@ -7,6 +7,7 @@
 //
 
 #import "EzSampleViewController.h"
+#import <objc/runtime.h>
 
 @interface EzSampleViewController ()
 
@@ -14,16 +15,41 @@
 
 @implementation EzSampleViewController
 
++ (void)test
+{
+	NSLog(@"TEST 1");
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+	[self originalMethod];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)update:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+	[[self class] load];
+	
+	[self originalMethod];
+}
+
+- (void)originalMethod
+{
+	NSLog(@"1 %s", __FUNCTION__);
+	self.label1.text = @"Original Method 1 was called.";
+}
+
+- (void)replaceMethod
+{
+	NSLog(@"1 %s", __FUNCTION__);
+	self.label1.text = @"Replace Method 1 was called.";
+}
+
+- (void)superTest:(id)sender
+{
+	self.label1.text = nil;
+	self.label2.text = nil;
 }
 
 @end

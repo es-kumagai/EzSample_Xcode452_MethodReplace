@@ -10,4 +10,15 @@
 
 @interface EzSampleViewController : UIViewController
 
+@property (nonatomic,readonly,weak) IBOutlet UILabel* label1;
+@property (nonatomic,readonly,weak) IBOutlet UILabel* label2;
+
+- (void)originalMethod;
+- (void)replaceMethod;
+
+- (IBAction)update:(id)sender;
+- (IBAction)superTest:(id)sender;
+
++ (void)test;
+
 @end

@@ -7,11 +7,37 @@
 //
 
 #import "EzSampleAppDelegate.h"
+#import "EzSampleViewController.h"
+#import <objc/runtime.h>
 
 @implementation EzSampleAppDelegate
 
+- (NSString*)dummy
+{
+	NSLog(@"DUMMY");
+	return @"DUMMY";
+}
+
+- (void)replaceStringMethod
+{
+	NSLog(@"Replace string");
+	
+	Class targetClass = [UILabel class];
+	SEL targetSelector = @selector(text);
+	
+	Class sourceClass = [EzSampleAppDelegate class];
+	
+	Method newMethod = class_getInstanceMethod(sourceClass, @selector(dummy));
+	IMP newImplementation = method_getImplementation(newMethod);
+	const char* newTypes = method_getTypeEncoding(newMethod);
+	
+	class_replaceMethod(targetClass, targetSelector, newImplementation, newTypes);
+}
+	
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+//	[self replaceStringMethod];
+	
     // Override point for customization after application launch.
     return YES;
 }
